@@ -1,0 +1,514 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '56984061522@s.whatsapp.net',
+    fromMe: false,
+    id: '2D6301F274E3436747',
+    participant: undefined
+  },
+  messageTimestamp: 1721274821,
+  pushName: 'Maria Yañez',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage { text: 'a', contextInfo: [ContextInfo] },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'a',
+  from: '56984061522'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_5103de2c-dc0c-4af4-a945-8159ef83ff04',
+  keyword: 'key_d6c44445-dd01-4475-9dbf-4f5a31395002',
+  answer: '===Esta es una respuesta automatica===',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 100,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'ea5b4a442bd628e641f2129f42cd83e3'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '56971026736@s.whatsapp.net',
+    fromMe: false,
+    id: '889B02C51E4F35DA8C98C9B259A3EECE',
+    participant: undefined
+  },
+  messageTimestamp: 1721274938,
+  pushName: 'Tomas',
+  broadcast: false,
+  message: Message {
+    conversation: 'Falta ml y lo de mañana',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Falta ml y lo de mañana',
+  from: '56971026736'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_5103de2c-dc0c-4af4-a945-8159ef83ff04',
+  keyword: 'key_d6c44445-dd01-4475-9dbf-4f5a31395002',
+  answer: '===Esta es una respuesta automatica===',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 100,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'ea5b4a442bd628e641f2129f42cd83e3'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '56971026736@s.whatsapp.net',
+    fromMe: false,
+    id: 'C47F52DD409B239C17DA6EE6DCF4FDA8',
+    participant: undefined
+  },
+  messageTimestamp: 1721274949,
+  pushName: 'Tomas',
+  broadcast: false,
+  message: Message {
+    conversation: 'Anshksndkd',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Anshksndkd',
+  from: '56971026736'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_5103de2c-dc0c-4af4-a945-8159ef83ff04',
+  keyword: 'key_d6c44445-dd01-4475-9dbf-4f5a31395002',
+  answer: '===Esta es una respuesta automatica===',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 100,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'ea5b4a442bd628e641f2129f42cd83e3'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '56971026736@s.whatsapp.net',
+    fromMe: false,
+    id: '58E52D7CBB7F0026C7701B5F33F92F96',
+    participant: undefined
+  },
+  messageTimestamp: 1721274952,
+  pushName: 'Tomas',
+  broadcast: false,
+  message: Message {
+    conversation: 'Funciona ?',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Funciona ?',
+  from: '56971026736'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_5103de2c-dc0c-4af4-a945-8159ef83ff04',
+  keyword: 'key_d6c44445-dd01-4475-9dbf-4f5a31395002',
+  answer: '===Esta es una respuesta automatica===',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 100,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'ea5b4a442bd628e641f2129f42cd83e3'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '56971026736@s.whatsapp.net',
+    fromMe: false,
+    id: 'B433792842AED503CFEE6D8E29CBD1EA',
+    participant: undefined
+  },
+  messageTimestamp: 1721274954,
+  pushName: 'Tomas',
+  broadcast: false,
+  message: Message {
+    conversation: 'Menu',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Menu',
+  from: '56971026736'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_ed8e9e70-4e3c-438d-b278-35a150cc9a6a',
+  keyword: 'key_d5619dab-0a59-496e-8202-f6fdf03b6d3e',
+  answer: 'Elige algunas de estas opciones:\r\n' +
+    '\r\n' +
+    'Opcion 1 - Catalogo\r\n' +
+    'Opcion 2 - Poleras\r\n' +
+    'Opcion 3 - Polerones\r\n' +
+    'Opcion 4 - Consultas\r\n' +
+    '\r\n' +
+    '\r\n' +
+    'Opcion 0 - Salir',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '11bf679b812610c706489070a621d7d4'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '56971026736@s.whatsapp.net',
+    fromMe: false,
+    id: '5FD699BC53BC3E6F57394A87748D1C2C',
+    participant: undefined
+  },
+  messageTimestamp: 1721274979,
+  pushName: 'Tomas',
+  broadcast: false,
+  message: Message {
+    conversation: '0',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '0',
+  from: '56971026736'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '56971026736@s.whatsapp.net',
+    fromMe: false,
+    id: '2574BC8C80520F9AB757783C18367364',
+    participant: undefined
+  },
+  messageTimestamp: 1721274984,
+  pushName: 'Tomas',
+  broadcast: false,
+  message: Message {
+    conversation: 'Menu',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Menu',
+  from: '56971026736'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_ed8e9e70-4e3c-438d-b278-35a150cc9a6a',
+  keyword: 'key_d5619dab-0a59-496e-8202-f6fdf03b6d3e',
+  answer: 'Elige algunas de estas opciones:\r\n' +
+    '\r\n' +
+    'Opcion 1 - Catalogo\r\n' +
+    'Opcion 2 - Poleras\r\n' +
+    'Opcion 3 - Polerones\r\n' +
+    'Opcion 4 - Consultas\r\n' +
+    '\r\n' +
+    '\r\n' +
+    'Opcion 0 - Salir',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '11bf679b812610c706489070a621d7d4'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '56971026736@s.whatsapp.net',
+    fromMe: false,
+    id: '868455B729F23EDD6445C24CA90B2309',
+    participant: undefined
+  },
+  messageTimestamp: 1721274989,
+  pushName: 'Tomas',
+  broadcast: false,
+  message: Message {
+    conversation: 'Pjito',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Pjito',
+  from: '56971026736'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '56971026736@s.whatsapp.net',
+    fromMe: false,
+    id: 'E32858A65E3DCBBD0EE0D2612BCB7679',
+    participant: undefined
+  },
+  messageTimestamp: 1721274992,
+  pushName: 'Tomas',
+  broadcast: false,
+  message: Message {
+    conversation: 'Ojito',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Ojito',
+  from: '56971026736'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '56971026736@s.whatsapp.net',
+    fromMe: false,
+    id: '8F96F55D208C65EB265ABFE0EDE31058',
+    participant: undefined
+  },
+  messageTimestamp: 1721274995,
+  pushName: 'Tomas',
+  broadcast: false,
+  message: Message {
+    conversation: '0',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '0',
+  from: '56971026736'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '56971026736@s.whatsapp.net',
+    fromMe: false,
+    id: '9442C961836CE53CC0947D6A26727D1D',
+    participant: undefined
+  },
+  messageTimestamp: 1721275000,
+  pushName: 'Tomas',
+  broadcast: false,
+  message: Message {
+    conversation: 'xdd',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'xdd',
+  from: '56971026736'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_5103de2c-dc0c-4af4-a945-8159ef83ff04',
+  keyword: 'key_d6c44445-dd01-4475-9dbf-4f5a31395002',
+  answer: '===Esta es una respuesta automatica===',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 100,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'ea5b4a442bd628e641f2129f42cd83e3'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '56971026736@s.whatsapp.net',
+    fromMe: false,
+    id: '6AE1ADF269586AB9DE9AE04AE1A6DA11',
+    participant: undefined
+  },
+  messageTimestamp: 1721275112,
+  pushName: 'Tomas',
+  broadcast: false,
+  message: Message {
+    conversation: 'Estoy ayudando a un amigo con web',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Estoy ayudando a un amigo con web',
+  from: '56971026736'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_5103de2c-dc0c-4af4-a945-8159ef83ff04',
+  keyword: 'key_d6c44445-dd01-4475-9dbf-4f5a31395002',
+  answer: '===Esta es una respuesta automatica===',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 100,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'ea5b4a442bd628e641f2129f42cd83e3'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '56971026736@s.whatsapp.net',
+    fromMe: false,
+    id: 'F35F9A82DEAD9E352D18839241BA4B9A',
+    participant: undefined
+  },
+  messageTimestamp: 1721275139,
+  pushName: 'Tomas',
+  broadcast: false,
+  message: Message {
+    conversation: 'Y le falta todos los crud, views y models de los formularios',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Y le falta todos los crud, views y models de los formularios',
+  from: '56971026736'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_5103de2c-dc0c-4af4-a945-8159ef83ff04',
+  keyword: 'key_d6c44445-dd01-4475-9dbf-4f5a31395002',
+  answer: '===Esta es una respuesta automatica===',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 100,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'ea5b4a442bd628e641f2129f42cd83e3'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '56971026736@s.whatsapp.net',
+    fromMe: false,
+    id: 'B3493448885D0DAC9171237519E8507A',
+    participant: undefined
+  },
+  messageTimestamp: 1721275144,
+  pushName: 'Tomas',
+  broadcast: false,
+  message: Message {
+    conversation: 'Y tiene el examen mañana',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Y tiene el examen mañana',
+  from: '56971026736'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_5103de2c-dc0c-4af4-a945-8159ef83ff04',
+  keyword: 'key_d6c44445-dd01-4475-9dbf-4f5a31395002',
+  answer: '===Esta es una respuesta automatica===',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 100,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'ea5b4a442bd628e641f2129f42cd83e3'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '56971026736@s.whatsapp.net',
+    fromMe: false,
+    id: 'A8013FEDB49256CC393A13FA2DE38585',
+    participant: undefined
+  },
+  messageTimestamp: 1721275147,
+  pushName: 'Tomas',
+  broadcast: false,
+  message: Message {
+    conversation: 'Yo creo que rip',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Yo creo que rip',
+  from: '56971026736'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_5103de2c-dc0c-4af4-a945-8159ef83ff04',
+  keyword: 'key_d6c44445-dd01-4475-9dbf-4f5a31395002',
+  answer: '===Esta es una respuesta automatica===',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 100,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'ea5b4a442bd628e641f2129f42cd83e3'
+}

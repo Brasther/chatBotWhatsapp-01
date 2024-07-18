@@ -1,0 +1,9 @@
+Elige algunas de estas opciones:
+
+Opcion 1 - Catalogo
+Opcion 2 - Poleras
+Opcion 3 - Polerones
+Opcion 4 - Consultas
+
+
+Opcion 0 - Salir
