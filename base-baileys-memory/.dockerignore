@@ -1,0 +1,7 @@
+node_modules
+.env
+bot_sessions
+auth_info_baileys
+.wwebjs_auth
+*.log
+bot.qr.png

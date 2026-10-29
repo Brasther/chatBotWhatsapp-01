@@ -5,7 +5,6 @@ const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 //const MockAdapter = require('@bot-whatsapp/database/mock')
 const MongoAdapter = require('@bot-whatsapp/database/mongo')
-console.log("MongoDB URI:", process.env.MONGO_DB_URI); // Verifica que la URI se imprime correctamente
 
 const path = require("path")
 const fs = require("fs")
@@ -52,13 +51,11 @@ const flowWelcome = addKeyword(EVENTS.WELCOME)
         
         await ctxFn.flowDynamic("Para cualquier consulta escriba, 'menu' ")
 
-
-        console.log(ctx.body)
     })
 
 
 
-const menuFlow = addKeyword("Menu").addAnswer(
+const menuFlow = addKeyword(["menu", "Menu", "MENU"]).addAnswer(
      menu,
      { capture: true },
      async (ctx, { gotoFlow, fallBack, flowDynamic }) => {
@@ -88,6 +85,10 @@ const menuFlow = addKeyword("Menu").addAnswer(
 
 
 const main = async () => {
+    if (!process.env.MONGO_DB_URI) {
+        throw new Error("Falta MONGO_DB_URI. Copia .env.example a .env y configura tu conexión MongoDB.");
+    }
+
     const adapterDB = new MongoAdapter({
         dbUri: process.env.MONGO_DB_URI,
         dbName: "test"

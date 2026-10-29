@@ -1,9 +1,8 @@
-FROM node:18-bullseye as bot
+FROM node:22-bookworm-slim AS bot
 WORKDIR /app
+ENV PORT=3000
+EXPOSE 3000
 COPY package*.json ./
-RUN npm i
+RUN npm ci --omit=dev
 COPY . .
-ARG RAILWAY_STATIC_URL
-ARG PUBLIC_URL
-ARG PORT
 CMD ["npm", "start"]
