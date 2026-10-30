@@ -1,7 +1,7 @@
 {
-    "name": "base-bailey-memory",
+    "name": "whatsapp-bot-starter",
     "version": "1.0.0",
-    "description": "Demostración de bot de WhatsApp para catálogo de ropa con Baileys y MongoDB",
+    "description": "Plantilla básica y configurable de bot de WhatsApp con Baileys",
     "main": "app.js",
     "scripts": {
         "start": "node app.js",
@@ -10,14 +10,11 @@
     "keywords": [],
     "dependencies": {
         "@bot-whatsapp/bot": "0.1.38",
-        "@bot-whatsapp/cli": "0.1.38",
         "@bot-whatsapp/database": "0.1.38",
         "@bot-whatsapp/portal": "0.1.38",
         "@bot-whatsapp/provider": "0.1.38",
         "@whiskeysockets/baileys": "6.5.0",
         "cache-manager": "5.2.4",
-        "dotenv": "16.4.5",
-        "mongodb": "6.8.0",
         "wa-sticker-formatter": "4.4.4"
     },
     "devDependencies": {

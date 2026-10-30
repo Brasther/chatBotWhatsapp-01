@@ -1,99 +1,52 @@
 const { createBot, createProvider, createFlow, addKeyword, EVENTS } = require('@bot-whatsapp/bot')
-require('dotenv').config();
-
 const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
-//const MockAdapter = require('@bot-whatsapp/database/mock')
-const MongoAdapter = require('@bot-whatsapp/database/mongo')
+const MockAdapter = require('@bot-whatsapp/database/mock')
+const fs = require('fs')
+const path = require('path')
 
-const path = require("path")
-const fs = require("fs")
+const readMessage = (fileName) => fs.readFileSync(path.join(__dirname, 'mensajes', fileName), 'utf8').trim()
 
+const answers = {
+    about: readMessage('acerca.txt'),
+    services: readMessage('servicios.txt'),
+    hours: readMessage('horarios.txt'),
+    contact: readMessage('contacto.txt'),
+}
 
-const menuPath = path.join(__dirname, "mensajes", "catalogo.txt")
-const menu = fs.readFileSync(menuPath, "utf8")
+const createOptionFlow = (answer) => addKeyword([EVENTS.ACTION]).addAnswer(answer)
 
-const bienvenidaPath = path.join(__dirname, "mensajes", "bienvenida.txt")
-const bienvenida = fs.readFileSync(bienvenidaPath, "utf8")
+const optionFlows = [
+    createOptionFlow(answers.about),
+    createOptionFlow(answers.services),
+    createOptionFlow(answers.hours),
+    createOptionFlow(answers.contact),
+]
 
-const consultaPath = path.join(__dirname, "mensajes", "consulta.txt")
-const consulta = fs.readFileSync(consultaPath, "utf8")
+const menuFlow = addKeyword(['menu', 'menú', 'Menu', 'Menú', 'MENU', 'MENÚ'])
+    .addAnswer(readMessage('menu.txt'), { capture: true }, async (ctx, { gotoFlow, fallBack, flowDynamic }) => {
+        const choice = ctx.body.trim()
 
-const poleraPath = path.join(__dirname, "mensajes", "polera.txt")
-const polera = fs.readFileSync(poleraPath, "utf8")
-
-const poleronPath = path.join(__dirname, "mensajes", "poleron.txt")
-const poleron = fs.readFileSync(poleronPath, "utf8")
-
-const FlowCatalogo = addKeyword([EVENTS.ACTION])
-    .addAnswer('Este es el Catalogo',{
-        media: "https://drive.google.com/file/d/1dl8miuNXodfJ6aJZGutqeKIDdjJf8gY5/view?usp=sharing"
-    })
-    
-const flowPoleras = addKeyword([EVENTS.ACTION])
-    .addAnswer(polera)
-
-const flowPolerones = addKeyword([EVENTS.ACTION])
-    .addAnswer(poleron)
-
-const flowConsulta = addKeyword([EVENTS.ACTION])
-    .addAnswer(consulta)
-
-const flowPrincipal = addKeyword(['hola','Hola','HOLA','ola','Ola','OLA','buenas','Buenas','BUENAS'])
-    .addAnswer(bienvenida)
-
-
-const flowWelcome = addKeyword(EVENTS.WELCOME)
-    .addAnswer("===Esta es una respuesta automatica===",{
-        delay: 100,
-    },
-    async (ctx,ctxFn) =>{
-        
-        await ctxFn.flowDynamic("Para cualquier consulta escriba, 'menu' ")
-
-    })
-
-
-
-const menuFlow = addKeyword(["menu", "Menu", "MENU"]).addAnswer(
-     menu,
-     { capture: true },
-     async (ctx, { gotoFlow, fallBack, flowDynamic }) => {
-     if (!["1", "2", "3", "4","0"].includes(ctx.body)) {
-     return fallBack(
-     "Respuesta no válida, por favor selecciona una de las opciones."
-     );
-     }
-     switch (ctx.body) {
-        case "1":
-            return  gotoFlow(FlowCatalogo);
-        case "2":
-            return  gotoFlow(flowPoleras);
-        case "3":
-            return  gotoFlow(flowPolerones);
-        case "4":
-            return  gotoFlow(flowConsulta);
-        case "0":
-            return await flowDynamic(
-            "Saliendo... Puedes volver a acceder a este menú escribiendo '*Menu*'"
-
-            );
-
+        if (choice === '0') {
+            await flowDynamic('Listo. Escribe *menu* cuando quieras volver a ver las opciones.')
+            return
         }
-    }
-);
 
+        const selectedFlow = Number(choice) - 1
+        if (!Number.isInteger(selectedFlow) || selectedFlow < 0 || selectedFlow >= optionFlows.length) {
+            return fallBack('Opción no válida. Responde con un número del 0 al 4.')
+        }
+
+        return gotoFlow(optionFlows[selectedFlow])
+    })
+
+const welcomeFlow = addKeyword(EVENTS.WELCOME)
+    .addAnswer(readMessage('bienvenida.txt'))
+    .addAnswer('Escribe *menu* para ver las opciones disponibles.')
 
 const main = async () => {
-    if (!process.env.MONGO_DB_URI) {
-        throw new Error("Falta MONGO_DB_URI. Copia .env.example a .env y configura tu conexión MongoDB.");
-    }
-
-    const adapterDB = new MongoAdapter({
-        dbUri: process.env.MONGO_DB_URI,
-        dbName: "test"
-    })
-    const adapterFlow = createFlow([flowPrincipal,flowWelcome ,menuFlow,FlowCatalogo,flowPoleras,flowPolerones,flowConsulta])
+    const adapterDB = new MockAdapter()
+    const adapterFlow = createFlow([menuFlow, welcomeFlow, ...optionFlows])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
@@ -105,4 +58,7 @@ const main = async () => {
     QRPortalWeb()
 }
 
-main()
+main().catch((error) => {
+    console.error('No se pudo iniciar el bot:', error.message)
+    process.exitCode = 1
+})

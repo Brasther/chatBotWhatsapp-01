@@ -1,12 +1,12 @@
-# Base del bot AnyShirt
+# Aplicación del bot
 
-Esta carpeta contiene la aplicación Node.js. Consulta el [README principal](../README.md) para instalarla, configurar MongoDB, vincular WhatsApp y probar los flujos.
+La guía de instalación y personalización está en el [README principal](../README.md).
 
-Comandos desde esta carpeta:
+Instala y ejecuta desde esta carpeta:
 
 ```bash
 npm ci
 npm start
 ```
 
-Antes del primer inicio, copia `.env.example` a `.env` y configura `MONGO_DB_URI`.
+Edita los textos de `mensajes/` para adaptar bienvenida, menú y respuestas.
